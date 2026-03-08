@@ -63,14 +63,16 @@ export const education = [
     degree: "PhD in Computer Science",
     institution: "University at Albany, SUNY",
     period: "2024 – Present",
-    focus: "Early toxicity forecasting, cyberbullying detection, interpretable AI for online safety"
+    focus: "Early toxicity forecasting, cyberbullying detection, interpretable AI for online safety",
+    logo: "https://customer-assets.emergentagent.com/job_cyber-safety-lab/artifacts/cf84rn68_university-at-albany-logo-png_seeklogo-488610.png"
   },
   {
     id: 2,
     degree: "Bachelor of Computer Science",
     institution: "International Islamic University Malaysia",
     period: "Completed",
-    focus: "Computer Science fundamentals and research foundation"
+    focus: "Computer Science fundamentals and research foundation",
+    logo: "https://customer-assets.emergentagent.com/job_cyber-safety-lab/artifacts/kkrf6vf4_IIUM_Logo_2019.svg"
   }
 ];
 

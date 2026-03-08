@@ -1,7 +1,7 @@
 import React from 'react';
 import { education } from '../data/mock';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-import { GraduationCap, Calendar, BookOpen } from 'lucide-react';
+import { GraduationCap, Calendar } from 'lucide-react';
 
 const Education = () => {
   return (
@@ -24,14 +24,19 @@ const Education = () => {
           {education.map((edu, index) => (
             <Card key={edu.id} className="border-gray-200 shadow-lg bg-white hover:shadow-xl transition-all duration-300">
               <CardHeader>
-                <div className="flex items-start gap-4">
-                  <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center flex-shrink-0 shadow-md">
-                    {index === 0 ? (
-                      <GraduationCap className="w-8 h-8 text-white" />
-                    ) : (
-                      <BookOpen className="w-8 h-8 text-white" />
-                    )}
+                <div className="flex items-start gap-6">
+                  {/* University Logo */}
+                  <div className="flex-shrink-0">
+                    <div className="w-24 h-24 rounded-lg bg-white border-2 border-gray-200 flex items-center justify-center p-3 shadow-md">
+                      <img 
+                        src={edu.logo} 
+                        alt={`${edu.institution} logo`}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
                   </div>
+                  
+                  {/* Education Details */}
                   <div className="flex-1">
                     <CardTitle className="text-2xl text-gray-900 mb-2">{edu.degree}</CardTitle>
                     <p className="text-purple-700 font-semibold text-lg mb-2">{edu.institution}</p>
