@@ -20,14 +20,21 @@ const Education = () => {
         </div>
 
         {/* Education Timeline */}
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-5xl mx-auto space-y-10">
           {education.map((edu, index) => (
-            <Card key={edu.id} className="border-gray-200 shadow-lg bg-white hover:shadow-xl transition-all duration-300">
-              <CardHeader>
-                <div className="flex items-start gap-6">
-                  {/* University Logo */}
+            <Card key={edu.id} className="border-gray-200 shadow-xl bg-white hover:shadow-2xl transition-all duration-300 overflow-hidden">
+              {/* University Brand Header */}
+              <div className={`h-2 ${index === 0 ? 'bg-gradient-to-r from-amber-500 to-purple-700' : 'bg-gradient-to-r from-teal-600 to-amber-500'}`}></div>
+              
+              <CardHeader className="pb-4">
+                <div className="flex items-start gap-8">
+                  {/* University Logo - Larger and More Prominent */}
                   <div className="flex-shrink-0">
-                    <div className="w-24 h-24 rounded-lg bg-white border-2 border-gray-200 flex items-center justify-center p-3 shadow-md">
+                    <div className={`w-32 h-32 rounded-xl flex items-center justify-center p-4 shadow-lg ${
+                      index === 0 
+                        ? 'bg-gradient-to-br from-amber-50 to-purple-50 border-2 border-amber-400' 
+                        : 'bg-gradient-to-br from-teal-50 to-amber-50 border-2 border-teal-400'
+                    }`}>
                       <img 
                         src={edu.logo} 
                         alt={`${edu.institution} logo`}
@@ -37,21 +44,30 @@ const Education = () => {
                   </div>
                   
                   {/* Education Details */}
-                  <div className="flex-1">
-                    <CardTitle className="text-2xl text-gray-900 mb-2">{edu.degree}</CardTitle>
-                    <p className="text-purple-700 font-semibold text-lg mb-2">{edu.institution}</p>
-                    <div className="flex items-center gap-2 text-gray-500">
-                      <Calendar className="w-4 h-4" />
-                      <span className="text-sm">{edu.period}</span>
+                  <div className="flex-1 pt-2">
+                    <CardTitle className="text-3xl text-gray-900 mb-3 font-bold">{edu.degree}</CardTitle>
+                    <p className={`font-bold text-xl mb-3 ${
+                      index === 0 ? 'text-purple-700' : 'text-teal-700'
+                    }`}>
+                      {edu.institution}
+                    </p>
+                    <div className="flex items-center gap-2 text-gray-600">
+                      <Calendar className="w-5 h-5" />
+                      <span className="text-base font-medium">{edu.period}</span>
                     </div>
                   </div>
                 </div>
               </CardHeader>
-              <CardContent>
+              
+              <CardContent className="pt-0">
                 {edu.focus && (
-                  <div className="border-l-4 border-amber-500 pl-6 py-3 bg-gray-50 rounded-r-lg">
-                    <p className="text-gray-700 leading-relaxed">
-                      <span className="font-semibold text-gray-900">Focus: </span>
+                  <div className={`border-l-4 pl-6 py-4 rounded-r-lg ${
+                    index === 0 
+                      ? 'border-amber-500 bg-amber-50' 
+                      : 'border-teal-500 bg-teal-50'
+                  }`}>
+                    <p className="text-gray-800 leading-relaxed text-base">
+                      <span className="font-bold text-gray-900">Research Focus: </span>
                       {edu.focus}
                     </p>
                   </div>
