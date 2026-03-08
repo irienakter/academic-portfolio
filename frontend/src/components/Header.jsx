@@ -13,7 +13,8 @@ const Header = () => {
     { path: '/experience', label: 'Experience' },
     { path: '/projects', label: 'Projects' },
     { path: '/publications', label: 'Publications' },
-    { path: '/awards', label: 'Honors & Awards' }
+    { path: '/awards', label: 'Honors & Awards' },
+    { path: '/news', label: 'News' }
   ];
 
   return (

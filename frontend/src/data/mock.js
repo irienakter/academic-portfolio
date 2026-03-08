@@ -200,6 +200,26 @@ export const awards = [
   }
 ];
 
+export const news = [
+  {
+    id: 1,
+    title: "New Study Unveils Early-Warning Framework to Predict Surges of Online Abuse",
+    date: "January 5, 2026",
+    source: "Rutgers School of Communication and Information",
+    url: "https://sci.rutgers.edu/news/new-study-unveils-early-warning-framework-predict-surges-online-abuse",
+    image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=500&fit=crop",
+    excerpt: "Researchers from Rutgers and University at Albany have developed an early-warning framework that can predict when a toxic social media conversation is likely to erupt into a wave of abusive remarks—a phenomenon called 'Neg Storms.'",
+    highlights: [
+      "Introduces Comment Storm Severity (CSS), a new metric to track and quantify toxicity levels",
+      "Can accurately forecast Neg Storms 70-80% of the time using only the first ten comments",
+      "Findings enable platforms to shift from reactive to proactive harm prevention",
+      "Paper accepted at 2025 International Symposium on Multimedia (ISM) in Naples, Italy"
+    ],
+    coAuthors: ["Vivek K. Singh (Rutgers)", "Pradeep K. Atrey (University at Albany)"],
+    category: "Research Publication"
+  }
+];
+
 export const skills = {
   programming: ["Python", "Java", "JavaScript", "C++"],
   ml_frameworks: ["PyTorch", "TensorFlow", "Scikit-learn", "Transformers"],
