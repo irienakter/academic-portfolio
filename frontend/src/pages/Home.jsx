@@ -1,9 +1,8 @@
 import React from 'react';
-import { personalInfo, researchInterests, education, awards } from '../data/mock';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
-import { Badge } from '../components/ui/badge';
+import { personalInfo, researchInterests } from '../data/mock';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Button } from '../components/ui/button';
-import { Mail, Linkedin, Award, GraduationCap } from 'lucide-react';
+import { Mail, Linkedin, GraduationCap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -75,19 +74,19 @@ const Home = () => {
                 <div className="w-16 h-1 bg-gradient-to-r from-purple-700 to-amber-600 mt-2"></div>
               </CardHeader>
               <CardContent className="prose prose-lg max-w-none">
-                <p className="text-gray-700 leading-relaxed mb-5">
+                <p className="text-gray-700 text-justify leading-relaxed mb-5">
                   I am a PhD student in Computer Science at the University at Albany, SUNY, working with the
                   Albany Lab for Privacy and Security (ALPS) under the supervision of Dr. Pradeep K. Atrey.
                   My research focuses on forecasting toxicity escalation in online conversations, with the goal of
                   building early-warning systems that support safer social media environments.
                 </p>
-                <p className="text-gray-700 leading-relaxed mb-5">
+                <p className="text-gray-700 text-justify leading-relaxed mb-5">
                   Unlike traditional moderation systems that detect harmful content only after it appears, my work
                   studies how toxic situations develop over time. By combining textual cues with temporal and
                   structural signals, I aim to design interpretable models that can predict harmful conversation
                   trajectories before they fully unfold.
                 </p>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 text-justify leading-relaxed">
                   My long-term goal is to contribute to proactive trust-and-safety technologies that enable earlier
                   intervention against cyberbullying, harassment, and coordinated online harm.
                 </p>
@@ -128,101 +127,6 @@ const Home = () => {
                 </Card>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Education Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <Card className="border-gray-200 shadow-lg bg-white">
-              <CardHeader>
-                <CardTitle className="text-3xl text-gray-900">Education</CardTitle>
-                <div className="w-16 h-1 bg-gradient-to-r from-purple-700 to-amber-600 mt-2"></div>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-8">
-                  {education.map((edu) => (
-                    <div key={edu.id} className="border-l-4 border-amber-500 pl-8 py-3 hover:border-amber-600 transition-colors">
-                      <h3 className="text-xl font-bold text-gray-900 mb-1">{edu.degree}</h3>
-                      <p className="text-purple-700 font-medium text-lg mb-1">{edu.institution}</p>
-                      <p className="text-gray-500 text-sm mb-2">{edu.period}</p>
-                      {edu.focus && (
-                        <p className="text-gray-600 mt-3 text-sm leading-relaxed italic">{edu.focus}</p>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Awards Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <Card className="border-gray-200 shadow-lg bg-white">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <Award className="w-8 h-8 text-amber-600" />
-                  <CardTitle className="text-3xl text-gray-900">Honors & Awards</CardTitle>
-                </div>
-                <div className="w-16 h-1 bg-gradient-to-r from-purple-700 to-amber-600"></div>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {awards.map((award) => (
-                    <div key={award.id} className="flex items-start gap-4 p-5 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
-                      <div className="w-14 h-14 rounded-full bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center flex-shrink-0 shadow-md">
-                        <Award className="w-7 h-7 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-gray-900 text-lg">{award.title}</h3>
-                        <p className="text-purple-700 font-medium">{award.organization}</p>
-                        <p className="text-gray-500 text-sm mt-1">{award.year}</p>
-                        <p className="text-gray-600 text-sm mt-2">{award.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <Card className="border-gray-200 shadow-lg bg-white">
-              <CardHeader>
-                <CardTitle className="text-3xl text-gray-900">Get In Touch</CardTitle>
-                <div className="w-16 h-1 bg-gradient-to-r from-purple-700 to-amber-600 mt-2 mb-3"></div>
-                <CardDescription className="text-lg text-gray-600">
-                  Feel free to reach out for collaboration, research discussions, or project opportunities.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-4">
-                  <a href={`mailto:${personalInfo.email}`}>
-                    <Button className="bg-purple-700 hover:bg-purple-800 text-white shadow-md hover:shadow-lg transition-all">
-                      <Mail className="w-4 h-4 mr-2" />
-                      {personalInfo.email}
-                    </Button>
-                  </a>
-                  <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" className="border-2 border-purple-700 text-purple-700 hover:bg-purple-50 shadow-sm hover:shadow-md transition-all">
-                      <Linkedin className="w-4 h-4 mr-2" />
-                      LinkedIn Profile
-                    </Button>
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
