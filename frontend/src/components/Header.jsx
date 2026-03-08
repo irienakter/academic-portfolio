@@ -10,10 +10,10 @@ const Header = () => {
   const navItems = [
     { path: '/', label: 'Home' },
     { path: '/education', label: 'Education' },
-    { path: '/awards', label: 'Honors & Awards' },
     { path: '/experience', label: 'Experience' },
     { path: '/projects', label: 'Projects' },
-    { path: '/publications', label: 'Publications' }
+    { path: '/publications', label: 'Publications' },
+    { path: '/awards', label: 'Honors & Awards' }
   ];
 
   return (

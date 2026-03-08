@@ -1,6 +1,6 @@
 import React from 'react';
 import { personalInfo, researchInterests } from '../data/mock';
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { Card, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { Mail, Linkedin, GraduationCap } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -65,33 +65,37 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <Card className="border-gray-200 shadow-lg bg-white">
-              <CardHeader>
-                <CardTitle className="text-3xl text-gray-900">Introduction</CardTitle>
-                <div className="w-16 h-1 bg-gradient-to-r from-purple-700 to-amber-600 mt-2"></div>
-              </CardHeader>
-              <CardContent className="prose prose-lg max-w-none">
-                <p className="text-gray-700 text-justify leading-relaxed mb-5">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Introduction</h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-purple-700 to-amber-600 mx-auto mb-6"></div>
+              <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+                Advancing proactive online safety through AI-driven toxicity forecasting and early intervention systems
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-8 md:p-12">
+              <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
+                <p className="text-justify">
                   I am a PhD student in Computer Science at the University at Albany, SUNY, working with the
                   Albany Lab for Privacy and Security (ALPS) under the supervision of Dr. Pradeep K. Atrey.
                   My research focuses on forecasting toxicity escalation in online conversations, with the goal of
                   building early-warning systems that support safer social media environments.
                 </p>
-                <p className="text-gray-700 text-justify leading-relaxed mb-5">
+                <p className="text-justify">
                   Unlike traditional moderation systems that detect harmful content only after it appears, my work
                   studies how toxic situations develop over time. By combining textual cues with temporal and
                   structural signals, I aim to design interpretable models that can predict harmful conversation
                   trajectories before they fully unfold.
                 </p>
-                <p className="text-gray-700 text-justify leading-relaxed">
+                <p className="text-justify">
                   My long-term goal is to contribute to proactive trust-and-safety technologies that enable earlier
                   intervention against cyberbullying, harassment, and coordinated online harm.
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>
