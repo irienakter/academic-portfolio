@@ -9,7 +9,7 @@ export const personalInfo = {
   advisor: "Dr. Pradeep K. Atrey",
   email: "iakter@albany.edu",
   linkedin: "https://linkedin.com/in/irien-akter",
-  profilePhoto: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop"
+  profilePhoto: "https://customer-assets.emergentagent.com/job_cyber-safety-lab/artifacts/uvaopdst_IMG_1335.jpg"
 };
 
 export const researchInterests = [
