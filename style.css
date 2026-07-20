@@ -1,0 +1,298 @@
+/* ---------- Base ---------- */
+:root{
+  --blue:#002b5c;
+  --bg:#f8f9fb;
+  --text:#111;
+  --muted:#4b5563;
+  --card:#ffffff;
+  --chip:#e6f0ff;
+  --line:rgba(0,0,0,0.08);
+}
+
+*{ box-sizing: border-box; }
+
+html{
+  scroll-behavior: smooth; /* smooth scroll for #links */
+}
+
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+
+/* ---------- Layout ---------- */
+.wrap{
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 22px 18px;
+}
+
+/* ---------- Header ---------- */
+.top{
+  background: var(--blue);
+  color: white;
+  padding: 56px 18px 28px;
+  text-align: center;
+}
+
+.top h1{
+  margin: 0;
+  font-size: 36px;
+  letter-spacing: 0.2px;
+}
+
+.lead{
+  font-size: 18px;
+  margin: 8px 0 0;
+  opacity: 0.95;
+}
+
+.subtitle{
+  max-width: 680px;
+  margin: 14px auto 0;
+  font-size: 15px;
+  color: #dce6f5;
+}
+
+/* Buttons row */
+.buttons{
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn{
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: white;
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: transform 0.08s ease, opacity 0.08s ease;
+}
+
+.btn:hover{
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.btn.ghost{
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.9);
+  color: white;
+}
+
+.btn.ghost:hover{
+  opacity: 0.9;
+}
+
+/* ---------- Cards / Sections ---------- */
+.card{
+  background: var(--card);
+  padding: 22px 22px;
+  margin: 18px 0;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  border: 1px solid var(--line);
+}
+
+h2{
+  margin: 0 0 10px;
+  color: var(--blue);
+  font-size: 22px;
+}
+
+h3{
+  margin: 14px 0 8px;
+  font-size: 17px;
+  color: #0f172a;
+}
+
+p{ margin: 10px 0; }
+
+/* ---------- Links ---------- */
+a{
+  color: #0b63ce;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+/* ---------- Chips ---------- */
+.chips{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.chip{
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: var(--chip);
+  font-size: 13px;
+  border: 1px solid rgba(0,43,92,0.08);
+}
+
+/* ---------- Lists (important for Experience nested lists) ---------- */
+.card ul,
+.card ol{
+  margin: 10px 0 0;
+  padding-left: 20px;
+}
+
+.card li{
+  margin: 8px 0;
+}
+
+.card li > ul{
+  margin-top: 8px;
+  padding-left: 18px;
+}
+
+.card li > ul li{
+  margin: 6px 0;
+  color: #111;
+}
+
+/* Make the role line slightly clearer */
+.card strong{
+  color: #0f172a;
+}
+
+/* Date lines */
+.card em{
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* ---------- Project blocks ---------- */
+.project{
+  margin-top: 14px;
+  padding: 14px 14px;
+  border-left: 4px solid var(--blue);
+  background: rgba(0,43,92,0.03);
+  border-radius: 10px;
+}
+
+.project ul{
+  margin-top: 8px;
+}
+
+/* ---------- Footer ---------- */
+.foot{
+  text-align: center;
+  font-size: 13px;
+  color: #6b7280;
+  margin: 26px 0 34px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px){
+  .top{
+    padding: 46px 14px 24px;
+  }
+
+  .top h1{
+    font-size: 30px;
+  }
+
+  .card{
+    padding: 18px 16px;
+  }
+
+  .btn{
+    width: 100%;
+    text-align: center;
+  }
+
+  .buttons{
+    gap: 8px;
+  }
+}
+
+/* Research Interest Cards with Images */
+.interest-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.interest-card{
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+  padding: 14px;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  background: rgba(0,43,92,0.03);
+}
+
+.interest-img{
+  width: 120px;
+  height: 86px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex: 0 0 auto;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: #fff;
+}
+
+.interest-content h3{
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.interest-content p{
+  margin: 0;
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+@media (max-width: 700px){
+  .interest-grid{ grid-template-columns: 1fr; }
+  .interest-img{ width: 110px; height: 80px; }
+}
+
+/* Publication buttons */
+.pub-links{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0 6px;
+}
+
+.pub-btn{
+  display: inline-block;
+  padding: 9px 14px;
+  border-radius: 10px;
+  background: #002b5c;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.pub-btn:hover{ opacity: 0.92; }
+
+.pub-btn.ghost{
+  background: transparent;
+  color: #002b5c;
+  border: 1px solid rgba(0,43,92,0.35);
+}
+
+.pub-note{
+  margin: 8px 0 0;
+  color: #4b5563;
+}
